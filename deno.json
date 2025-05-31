@@ -1,0 +1,16 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-read --allow-write --unstable-kv src/cmd/main.ts",
+    "dev": "deno run --allow-net --allow-read --allow-write --unstable-kv --watch src/cmd/main.ts",
+    "tokens": "deno run --allow-net src/cmd/available-tokens.ts",
+    "analyze": "deno run --allow-read --allow-write --unstable-kv src/cmd/analysis.ts",
+    "stats": "deno run --allow-net --allow-read --allow-write --unstable-kv src/cmd/stats.ts",
+    "export": "deno run --allow-read --allow-write --unstable-kv src/cmd/export.ts",
+    "cleanup": "deno run --allow-read --allow-write --unstable-kv src/cmd/cleanup.ts",
+    "recent": "deno run --allow-net --allow-read --allow-write --unstable-kv src/cmd/recent.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window"],
+    "strict": true
+  }
+}
