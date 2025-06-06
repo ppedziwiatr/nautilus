@@ -1,0 +1,7 @@
+SYMBOLS = [
+    "AAVE", "ACE", "ADA", "AI", "ALGO", "ALT", "ANIME", "APE", "APT", "AR",
+    "ARB", "ARK", "ATOM", "AVAX",
+]
+
+HYPERLIQUID_VENUE = "HYPERLIQUID"
+BINANCE_VENUE = "BINANCE"
