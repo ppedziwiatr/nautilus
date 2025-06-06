@@ -135,7 +135,7 @@ class HyperliquidLiveDataClient(LiveMarketDataClient):
                         ts_init=self._clock.timestamp_ns(),
                     )
 
-                    self._log.info(f"publish to data.quotes.{instrument_id.venue.value}.{instrument_id.symbol.value}")
+                    # self._log.info(f"publish to data.quotes.{instrument_id.venue.value}.{instrument_id.symbol.value}")
 
                     # self._msgbus.publish(topic=f"data.quotes.${instrument_id}", msg=quote_tick)
                     # note: during the subscription to a topic, the order of symbol.venue seems to be changed to venue.symbol...because why not?

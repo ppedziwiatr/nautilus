@@ -93,8 +93,8 @@ class ArbitrageStrategy(Strategy):
         # Initialize active positions tracking
         for instrument in self.instruments:
             self.active_positions[instrument] = {
-                "HYPERLIQUID": Decimal("0"),
-                "BINANCE": Decimal("0")
+                HYPERLIQUID_VENUE: Decimal("0"),
+                BINANCE_VENUE: Decimal("0")
             }
             for venue in [HYPERLIQUID_VENUE, BINANCE_VENUE]:
                 instrument_id = InstrumentId(symbol=Symbol(instrument), venue=Venue(venue))
@@ -110,7 +110,7 @@ class ArbitrageStrategy(Strategy):
 
     def handle_quote_tick(self, tick: QuoteTick) -> None:
         """Handle incoming price data from custom data clients."""
-        self.log.info(f"handle_quote_tick {tick}")
+        # self.log.info(f"handle_quote_tick {tick}")
         try:
             self._update_price_data(tick)
             self._check_arbitrage_opportunities()

@@ -48,9 +48,8 @@ async def main():
     config = TradingNodeConfig(
         trader_id=TraderId("PPE-THE-TRADER-555"),
         logging=LoggingConfig(
-            log_level="DEBUG",
-            # log_level_file="DEBUG",
-            # log_file_format="json",
+            # log_level="DEBUG",
+            log_level="INFO",
             log_colors=True,
             use_pyo3=True,
         ),
